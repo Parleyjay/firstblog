@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% block content %}
+
+ 
+<h1>Detail</h1>
+
+<strong>{{ blog.blog_title }} </strong> - {{ blog.date_uploaded }}
+<br>
+{{ blog.blog_post }} 
+<br><br>
+
+<a href="{% url 'update_blog' id=blog.id %}" class="btn btn-outline-secondary">Update</a> - <a href="{% url 'delete_blog' id=blog.id %}" class="btn btn-outline-danger">Delete</a>
+
+
+{% endblock %}
