@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<h1>Edit Blog</h1>
+<br>
+<a href="{% url 'posts' %}" class="btn btn-outline-secondary">Back</a>
+<hr>
+
+<form action="" method="Post">
+    {{ form.as_p }}
+    {% csrf_token %}
+
+
+    <button class="btn btn-secondary">Update</button>
+</form>
+
+{% endblock %}

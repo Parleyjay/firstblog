@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<center>
+<h1>Add Post</h1>
+
+{% if submitted %}
+        You have posted a new blog
+
+
+        {% else %}
+<form action="" method="POST">
+
+    {{ form.as_p }}
+    {% csrf_token %}
+
+
+    <button type="submit" value="submit" class="btn btn-success">Post</button>
+</form>
+</center>
+{% endif %}
+
+{% endblock %}
